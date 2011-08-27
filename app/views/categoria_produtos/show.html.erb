@@ -1,0 +1,16 @@
+<% title "Categoria Produto" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @categoria_produto.nome %>
+</p>
+<p>
+  <strong>Classe Produto:</strong>
+  <%= @categoria_produto.classe_produto %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_categoria_produto_path(@categoria_produto) %> |
+  <%= link_to "Destroy", @categoria_produto, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", categoria_produtos_path %>
+</p>

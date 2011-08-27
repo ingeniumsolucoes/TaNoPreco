@@ -1,0 +1,12 @@
+<% title "Loja" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @loja.nome %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_loja_path(@loja) %> |
+  <%= link_to "Destroy", @loja, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", lojas_path %>
+</p>

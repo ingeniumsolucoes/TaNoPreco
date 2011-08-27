@@ -1,0 +1,19 @@
+<% title "Categoria Produtos" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Classe Produto</th>
+  </tr>
+  <% for categoria_produto in @categoria_produtos %>
+    <tr>
+      <td><%= categoria_produto.nome %></td>
+      <td><%= categoria_produto.classe_produto %></td>
+      <td><%= link_to "Show", categoria_produto %></td>
+      <td><%= link_to "Edit", edit_categoria_produto_path(categoria_produto) %></td>
+      <td><%= link_to "Destroy", categoria_produto, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Categoria Produto", new_categoria_produto_path %></p>

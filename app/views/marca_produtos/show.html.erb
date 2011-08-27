@@ -1,0 +1,12 @@
+<% title "Marca Produto" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @marca_produto.nome %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_marca_produto_path(@marca_produto) %> |
+  <%= link_to "Destroy", @marca_produto, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", marca_produtos_path %>
+</p>

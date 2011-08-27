@@ -1,0 +1,12 @@
+<%= form_for @categoria_produto do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :classe_produto %><br />
+    <%= f.text_field :classe_produto %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

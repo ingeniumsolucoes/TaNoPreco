@@ -1,0 +1,17 @@
+<% title "Marca Produtos" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+  <% for marca_produto in @marca_produtos %>
+    <tr>
+      <td><%= marca_produto.nome %></td>
+      <td><%= link_to "Show", marca_produto %></td>
+      <td><%= link_to "Edit", edit_marca_produto_path(marca_produto) %></td>
+      <td><%= link_to "Destroy", marca_produto, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Marca Produto", new_marca_produto_path %></p>

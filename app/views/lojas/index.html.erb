@@ -1,0 +1,17 @@
+<% title "Lojas" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+  <% for loja in @lojas %>
+    <tr>
+      <td><%= loja.nome %></td>
+      <td><%= link_to "Show", loja %></td>
+      <td><%= link_to "Edit", edit_loja_path(loja) %></td>
+      <td><%= link_to "Destroy", loja, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Loja", new_loja_path %></p>
