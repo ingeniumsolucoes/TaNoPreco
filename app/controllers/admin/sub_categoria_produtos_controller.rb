@@ -1,4 +1,4 @@
-class SubCategoriaProdutosController < ApplicationController
+class Admin::SubCategoriaProdutosController < ApplicationController
   def index
     @sub_categoria_produtos = SubCategoriaProduto.all
   end
@@ -9,12 +9,13 @@ class SubCategoriaProdutosController < ApplicationController
 
   def new
     @sub_categoria_produto = SubCategoriaProduto.new
+    @sub_categoria_produto.atributo_sub_categorias.build
   end
 
   def create
     @sub_categoria_produto = SubCategoriaProduto.new(params[:sub_categoria_produto])
     if @sub_categoria_produto.save
-      redirect_to @sub_categoria_produto, :notice => "Successfully created sub categoria produto."
+      redirect_to [:admin, @sub_categoria_produto], :notice => "Successfully created sub categoria produto."
     else
       render :action => 'new'
     end
@@ -36,6 +37,6 @@ class SubCategoriaProdutosController < ApplicationController
   def destroy
     @sub_categoria_produto = SubCategoriaProduto.find(params[:id])
     @sub_categoria_produto.destroy
-    redirect_to sub_categoria_produtos_url, :notice => "Successfully destroyed sub categoria produto."
+    redirect_to admin_sub_categoria_produtos_url, :notice => "Successfully destroyed sub categoria produto."
   end
 end

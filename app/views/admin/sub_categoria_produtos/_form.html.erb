@@ -1,0 +1,19 @@
+<%= form_for ([:admin, @sub_categoria_produto]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :categoria_produto_id %><br />
+    <%= f.text_field :categoria_produto_id %>
+  </p>
+  <%= f.fields_for :atributo_sub_categorias do |builder|%>
+  <p>
+    <%= builder.label :nome %><br />
+    <%= builder.text_field :nome %>
+  </p>
+  <%end%>
+  
+  <p><%= f.submit %></p>
+<% end %>

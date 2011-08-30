@@ -1,4 +1,4 @@
-<%= form_for @classe_produto do |f| %>
+<%= form_for ([:admin, @classe_produto]) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :nome %><br />

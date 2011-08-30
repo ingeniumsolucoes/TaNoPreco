@@ -32,5 +32,6 @@ group :test do
   gem 'turn', :require => false
 end
 
+gem 'annotate'
 gem "nifty-generators", :group => :development
 gem "mocha", :group => :test
